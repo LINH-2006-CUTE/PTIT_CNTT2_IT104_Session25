@@ -8,10 +8,8 @@ const users = [
 
 export default function UserDetail() {
   const { id } = useParams();
-  const user = users.find((u) => u.id === Number(id));
-
+  const user = users.find((user) => user.id === Number(id));
   if (!user) return <h2>User không tồn tại</h2>;
-
   return (
     <div>
       <h2>Thông tin chi tiết</h2>
